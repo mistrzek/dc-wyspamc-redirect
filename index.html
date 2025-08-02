@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Wyspa MC - Discord</title>
+    <meta http-equiv="refresh" content="1; url=https://discord.gg/j48wfEtHYE">
+    <style>
+        body { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; 
+            font-family: 'Segoe UI', Arial; 
+            text-align: center; 
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .logo { 
+            font-size: 64px; 
+            margin-bottom: 20px;
+            animation: bounce 2s infinite;
+        }
+        h1 { margin: 20px 0; }
+        p { font-size: 18px; margin: 15px 0; }
+        a { 
+            color: #FFD700; 
+            text-decoration: none; 
+            font-weight: bold;
+            padding: 10px 20px;
+            background: rgba(255,215,0,0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+        a:hover { background: rgba(255,215,0,0.4); }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+        .timer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+            margin: 20px 0;
+        }
+    </style>
+    <script>
+        let countdown = 3;
+        function updateTimer() {
+            document.getElementById('timer').textContent = countdown;
+            countdown--;
+            if (countdown < 0) {
+                window.location.href = "https://discord.gg/j48wfEtHYE";
+            }
+        }
+        setInterval(updateTimer, 1000);
+        setTimeout(() => {
+            window.location.href = "https://discord.gg/j48wfEtHYE";
+        }, 3000);
+    </script>
+</head>
+<body onload="updateTimer()">
+    <div class="container">
+        <div class="logo">🦀</div>
+        <h1>Wyspa MC</h1>
+        <p>Przekierowywanie na nasz serwer Discord...</p>
+        <div class="timer">Przekierowanie za: <span id="timer">3</span>s</div>
+        <p>Jeśli nie zostałeś przekierowany automatycznie:</p>
+        <a href="https://discord.gg/j48wfEtHYE">👆 Kliknij tutaj</a>
+    </div>
+</body>
+</html>
